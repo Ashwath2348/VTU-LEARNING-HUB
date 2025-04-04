@@ -1,30 +1,28 @@
-// DOMContentLoaded ensures the script runs after the page is fully loaded
-document.addEventListener("DOMContentLoaded", () => {
-
-    // Example: Add a scroll effect to highlight the nav bar
-    window.addEventListener('scroll', () => {
-        const header = document.querySelector('header');
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
+// Smooth scroll behavior for navigation
+document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
         }
     });
+});
 
-    // Example: Alert for contact link (placeholder interaction)
-    const contactLink = document.querySelector('a[href="#contact"]');
-    if (contactLink) {
-        contactLink.addEventListener('click', (e) => {
-            e.preventDefault();
-            alert("Contact page is under construction.");
-        });
-    }
+// Expand/collapse year sections
+document.querySelectorAll('.year h3').forEach(heading => {
+    heading.style.cursor = 'pointer';
+    heading.addEventListener('click', () => {
+        const list = heading.nextElementSibling;
+        if (list && list.tagName.toLowerCase() === 'ul') {
+            list.style.display = (list.style.display === 'none') ? 'block' : 'none';
+        }
+    });
+});
 
-    // Toggle mobile menu (if you plan to add it)
-    const navToggle = document.querySelector('.nav-toggle');
-    if (navToggle) {
-        navToggle.addEventListener('click', () => {
-            document.querySelector('nav ul').classList.toggle('active');
-        });
-    }
+// Optional: Auto-collapse all on load
+window.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.year ul').forEach(ul => {
+        ul.style.display = 'none';
+    });
 });

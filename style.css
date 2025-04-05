@@ -1,4 +1,4 @@
-/* style.css - Black & White Theme */
+/* style.css - Black & White with Dark Mode Support */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
@@ -6,6 +6,7 @@ body {
   color: #000000;
 }
 
+/* Header */
 header {
   background-color: #000000;
   color: white;
@@ -25,6 +26,7 @@ header p {
   color: #ccc;
 }
 
+/* Navigation */
 nav {
   background-color: #111;
   display: flex;
@@ -45,6 +47,7 @@ nav a:hover {
   color: #ffcc00;
 }
 
+/* Section Layout */
 .section {
   padding: 2rem 1rem;
   text-align: center;
@@ -80,6 +83,7 @@ nav a:hover {
   text-decoration: none;
 }
 
+/* Footer */
 footer {
   background-color: #000;
   color: white;
@@ -88,6 +92,7 @@ footer {
   margin-top: 2rem;
 }
 
+/* Code Blocks */
 pre {
   background-color: #f4f4f4;
   padding: 1rem;
@@ -98,13 +103,61 @@ pre {
   border: 1px solid #ccc;
 }
 
+/* Titles */
 h1, h2, h3 {
   color: #000000;
 }
 
+/* Embeds */
 embed, iframe {
   border: 2px solid #000000;
   border-radius: 8px;
   margin: 1rem 0;
   width: 100%;
+}
+
+/* ============================= */
+/* 🌙 Dark Mode Overrides */
+/* ============================= */
+body.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+body.dark-mode header,
+body.dark-mode footer,
+body.dark-mode nav {
+  background-color: #000;
+  color: #fff;
+}
+
+body.dark-mode .year-box {
+  background-color: #1e1e1e;
+  color: white;
+  border-color: #444;
+}
+
+body.dark-mode nav a {
+  color: #ddd;
+}
+
+body.dark-mode nav a:hover {
+  color: #ffcc00;
+}
+
+body.dark-mode pre {
+  background-color: #222;
+  color: #fff;
+  border-color: #555;
+}
+
+body.dark-mode iframe,
+body.dark-mode embed {
+  border-color: #444;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3 {
+  color: #fff;
 }

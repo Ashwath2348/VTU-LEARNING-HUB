@@ -1,132 +1,90 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VTU Subjects - ADA Hub</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Engineering Portal</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f2f2f2;
+      margin: 0;
+    }
+
+    header, footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    nav {
+      background: #0055aa;
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+      gap: 1rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .section {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .year-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .year-box {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ccc;
+      width: 150px;
+    }
+
+    .year-box a {
+      text-decoration: none;
+      color: #003366;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>ADA Hub - VTU CSE & CSBS Subjects</h1>
-        <nav>
-            <a href="#cse">CSE</a>
-            <a href="#csbs">CSBS</a>
-        </nav>
-    </header>
+  <header>
+    <h1>Engineering Lab & Notes Hub</h1>
+    <p>All years, all subjects, all in one place!</p>
+  </header>
 
-    <main>
-        <!-- CSE Section -->
-        <section id="cse">
-            <h2>CSE - Computer Science & Engineering</h2>
+  <nav>
+    <a href="/compilers/c.html">C Compiler</a>
+    <a href="/compilers/java.html">Java Compiler</a>
+    <a href="/compilers/python.html">Python Compiler</a>
+  </nav>
 
-            <div class="year">
-                <h3>1st Year</h3>
-                <ul>
-                    <li>Engineering Mathematics-I</li>
-                    <li>Engineering Physics / Chemistry</li>
-                    <li>Programming in C</li>
-                    <li>Basic Electrical Engineering</li>
-                    <li>Engineering Mechanics / Civil</li>
-                    <li>Engineering Graphics</li>
-                    <li>Environmental Studies</li>
-                </ul>
-            </div>
+  <div class="section">
+    <h2>Select Year</h2>
+    <div class="year-links">
+      <div class="year-box"><a href="/year1/c_programming.html">1st Year</a></div>
+      <div class="year-box"><a href="#">2nd Year</a></div>
+      <div class="year-box"><a href="#">3rd Year</a></div>
+      <div class="year-box"><a href="#">4th Year</a></div>
+    </div>
+  </div>
 
-            <div class="year">
-                <h3>2nd Year</h3>
-                <ul>
-                    <li>Data Structures</li>
-                    <li>Discrete Mathematics</li>
-                    <li>Computer Organization</li>
-                    <li>Object Oriented Programming</li>
-                    <li>Digital Electronics</li>
-                    <li>Software Engineering</li>
-                </ul>
-            </div>
-
-            <div class="year">
-                <h3>3rd Year</h3>
-                <ul>
-                    <li>Design and Analysis of Algorithms</li>
-                    <li>Operating Systems</li>
-                    <li>Database Management Systems</li>
-                    <li>Computer Networks</li>
-                    <li>Microcontroller and Embedded Systems</li>
-                    <li>Machine Learning</li>
-                </ul>
-            </div>
-
-            <div class="year">
-                <h3>4th Year</h3>
-                <ul>
-                    <li>Web Technology and Applications</li>
-                    <li>Cloud Computing</li>
-                    <li>Artificial Intelligence</li>
-                    <li>Big Data Analytics</li>
-                    <li>Project Work</li>
-                    <li>Internship / Seminar</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- CSBS Section -->
-        <section id="csbs">
-            <h2>CSBS - Computer Science and Business Systems</h2>
-
-            <div class="year">
-                <h3>1st Year</h3>
-                <ul>
-                    <li>Engineering Mathematics</li>
-                    <li>Physics / Chemistry</li>
-                    <li>Programming for Problem Solving</li>
-                    <li>Basics of Electrical/Electronics</li>
-                    <li>Engineering Graphics</li>
-                    <li>Professional Communication</li>
-                </ul>
-            </div>
-
-            <div class="year">
-                <h3>2nd Year</h3>
-                <ul>
-                    <li>Data Structures & Algorithms</li>
-                    <li>Operating Systems</li>
-                    <li>Principles of Management</li>
-                    <li>Database Management Systems</li>
-                    <li>Design Thinking</li>
-                    <li>Business Communication</li>
-                </ul>
-            </div>
-
-            <div class="year">
-                <h3>3rd Year</h3>
-                <ul>
-                    <li>Web Development</li>
-                    <li>Cloud Computing</li>
-                    <li>Business Analytics</li>
-                    <li>Financial Management</li>
-                    <li>Artificial Intelligence</li>
-                    <li>UX/UI Design</li>
-                </ul>
-            </div>
-
-            <div class="year">
-                <h3>4th Year</h3>
-                <ul>
-                    <li>Machine Learning</li>
-                    <li>Entrepreneurship</li>
-                    <li>Big Data & Blockchain</li>
-                    <li>Industrial Internship</li>
-                    <li>Project Work</li>
-                </ul>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>© 2025 ADA Hub | Powered by VTU Curriculum</p>
-    </footer>
-
-    <script src="script.js"></script>
+  <footer>
+    <p>© 2025 Engineering Portal. All rights reserved.</p>
+  </footer>
 </body>
 </html>

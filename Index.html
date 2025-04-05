@@ -1,70 +1,19 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Engineering Portal</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      background: #f2f2f2;
-      margin: 0;
-    }
-
-    header, footer {
-      background: #003366;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-    }
-
-    nav {
-      background: #0055aa;
-      display: flex;
-      justify-content: center;
-      padding: 1rem;
-      gap: 1rem;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .section {
-      padding: 2rem;
-      text-align: center;
-    }
-
-    .year-links {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      margin-top: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .year-box {
-      background: white;
-      padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 0 10px #ccc;
-      width: 150px;
-    }
-
-    .year-box a {
-      text-decoration: none;
-      color: #003366;
-      font-weight: bold;
-    }
-  </style>
+  <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
   <header>
     <h1>Engineering Lab & Notes Hub</h1>
     <p>All years, all subjects, all in one place!</p>
+    <!-- Dark Mode Button -->
+    <button onclick="toggleDarkMode()" style="margin-top: 1rem; background: black; color: white; padding: 0.5rem 1rem; border: none; border-radius: 5px;">
+      Toggle Dark Mode
+    </button>
   </header>
 
   <nav>
@@ -86,5 +35,8 @@
   <footer>
     <p>© 2025 Engineering Portal. All rights reserved.</p>
   </footer>
+
+  <!-- Link to JavaScript file -->
+  <script src="/script.js" defer></script>
 </body>
 </html>

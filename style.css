@@ -24,26 +24,27 @@ $1
   color: #000;
 }
 header {
-  background-color: #000000;
-  color: white;
-  padding: 1.5rem 1rem;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 header h1 {
   margin: 0;
   font-size: 2rem;
-  flex-grow: 1;
-  text-align: center;
+  text-align: left;
+  flex: 1;
 }
 
 header h1::before {
   content: 'VTU Learning Hub';
   display: block;
+  color: #000000;
+  background-color: #ffffff;
 }
 
 header p {

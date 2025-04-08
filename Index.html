@@ -2,114 +2,114 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Engineering Portal</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
-<body class="bg-white text-black transition-colors duration-300">
+<body>
+
+  <!-- Theme Toggle Button -->
+  <button id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
+
   <!-- Header -->
-  <header class="bg-white border-b border-black p-4 flex flex-col items-center">
-    <div class="w-full flex justify-between items-center mb-2">
-      <a href="/index.html" class="bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition">🏠 Home</a>
-      <button onclick="toggleDarkMode()" class="bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition">🌓 Toggle Dark Mode</button>
+  <header>
+    <div class="top-bar">
+      <a href="/index.html" class="home-button">🏠 Home</a>
     </div>
-    <h1 class="text-3xl font-bold">Engineering Lab & Notes Hub</h1>
-    <p class="text-lg mt-1">All years, all subjects, all in one place!</p>
+    <h1>Engineering Lab & Notes Hub</h1>
+    <p>All years, all subjects, all in one place!</p>
   </header>
 
   <!-- Navigation -->
-  <nav class="flex justify-center gap-6 bg-white border-b border-black p-4">
-    <a href="/compilers/c.html" class="text-black font-medium hover:text-gray-700 flex items-center gap-2"><i class="ph ph-code"></i> C Compiler</a>
-    <a href="/compilers/java.html" class="text-black font-medium hover:text-gray-700 flex items-center gap-2"><i class="ph ph-cup"></i> Java Compiler</a>
-    <a href="/compilers/python.html" class="text-black font-medium hover:text-gray-700 flex items-center gap-2"><i class="ph ph-snake"></i> Python Compiler</a>
+  <nav>
+    <a href="/compilers/c.html"><i class="ph ph-code"></i> C Compiler</a>
+    <a href="/compilers/java.html"><i class="ph ph-cup"></i> Java Compiler</a>
+    <a href="/compilers/python.html"><i class="ph ph-snake"></i> Python Compiler</a>
   </nav>
 
   <!-- Year Section -->
-  <section class="p-6">
-    <h2 class="text-2xl font-semibold text-center mb-6">Select Year</h2>
-    <div class="grid md:grid-cols-2 gap-6">
+  <section class="section">
+    <h2>Select Year</h2>
+    <div class="year-links">
 
-      <!-- Year Cards -->
-      <div class="bg-white border border-black rounded-xl p-4 shadow-md hover:shadow-xl transition">
-        <button onclick="toggleDropdown('year1')" class="w-full text-left text-lg font-semibold flex items-center justify-between">1st Year <i class="ph ph-caret-down"></i></button>
-        <div id="year1" class="mt-2 hidden">
-          <ul class="space-y-2 pl-4 mt-2">
-            <li><a href="/year1/maths.html" class="hover:underline">📐 Engineering Mathematics I & II</a></li>
-            <li><a href="/year1/physics.html" class="hover:underline">🔬 Engineering Physics</a></li>
-            <li><a href="/year1/chemistry.html" class="hover:underline">⚗️ Engineering Chemistry</a></li>
-            <li><a href="/year1/c_programming.html" class="hover:underline">💻 C Programming</a></li>
-            <li><a href="/year1/electrical.html" class="hover:underline">⚡ Basic Electrical Engineering</a></li>
-            <li><a href="/year1/electronics.html" class="hover:underline">📟 Basic Electronics</a></li>
-            <li><a href="/year1/env.html" class="hover:underline">🌿 Environmental Studies</a></li>
-            <li><a href="/year1/graphics.html" class="hover:underline">📏 Engineering Graphics</a></li>
-            <li><a href="/year1/labs.html" class="hover:underline">🧪 Labs</a></li>
-          </ul>
-        </div>
+      <!-- Year 1 -->
+      <div class="year-box">
+        <h3>1st Year</h3>
+        <a href="/year1/maths.html">📐 Engg. Math I & II</a>
+        <a href="/year1/physics.html">🔬 Physics</a>
+        <a href="/year1/chemistry.html">⚗️ Chemistry</a>
+        <a href="/year1/c_programming.html">💻 C Programming</a>
+        <a href="/year1/electrical.html">⚡ Electrical</a>
+        <a href="/year1/electronics.html">📟 Electronics</a>
+        <a href="/year1/env.html">🌿 Environment</a>
+        <a href="/year1/graphics.html">📏 Graphics</a>
+        <a href="/year1/labs.html">🧪 Labs</a>
       </div>
 
-      <div class="bg-white border border-black rounded-xl p-4 shadow-md hover:shadow-xl transition">
-        <button onclick="toggleDropdown('year2')" class="w-full text-left text-lg font-semibold flex items-center justify-between">2nd Year <i class="ph ph-caret-down"></i></button>
-        <div id="year2" class="mt-2 hidden">
-          <ul class="space-y-2 pl-4 mt-2">
-            <li><a href="/year2/data_structures.html" class="hover:underline">🧩 Data Structures</a></li>
-            <li><a href="/year2/digital_logic.html" class="hover:underline">🔢 Digital Logic</a></li>
-            <li><a href="/year2/discrete_math.html" class="hover:underline">📊 Discrete Math</a></li>
-            <li><a href="/year2/oop.html" class="hover:underline">🎯 OOP</a></li>
-            <li><a href="/year2/co.html" class="hover:underline">🧠 Computer Organization</a></li>
-            <li><a href="/year2/dbms.html" class="hover:underline">💾 DBMS</a></li>
-            <li><a href="/year2/microcontroller.html" class="hover:underline">📘 Microcontrollers</a></li>
-            <li><a href="/year2/labs.html" class="hover:underline">🧪 Labs</a></li>
-          </ul>
-        </div>
+      <!-- Year 2 -->
+      <div class="year-box">
+        <h3>2nd Year</h3>
+        <a href="/year2/data_structures.html">🧩 Data Structures</a>
+        <a href="/year2/digital_logic.html">🔢 Digital Logic</a>
+        <a href="/year2/discrete_math.html">📊 Discrete Math</a>
+        <a href="/year2/oop.html">🎯 OOP</a>
+        <a href="/year2/co.html">🧠 Computer Org</a>
+        <a href="/year2/dbms.html">💾 DBMS</a>
+        <a href="/year2/microcontroller.html">📘 Microcontrollers</a>
+        <a href="/year2/labs.html">🧪 Labs</a>
       </div>
 
-      <div class="bg-white border border-black rounded-xl p-4 shadow-md hover:shadow-xl transition">
-        <button onclick="toggleDropdown('year3')" class="w-full text-left text-lg font-semibold flex items-center justify-between">3rd Year <i class="ph ph-caret-down"></i></button>
-        <div id="year3" class="mt-2 hidden">
-          <ul class="space-y-2 pl-4 mt-2">
-            <li><a href="/year3/os.html" class="hover:underline">🧮 Operating Systems</a></li>
-            <li><a href="/year3/cn.html" class="hover:underline">🌐 Computer Networks</a></li>
-            <li><a href="/year3/se.html" class="hover:underline">🧱 Software Engineering</a></li>
-            <li><a href="/year3/daa.html" class="hover:underline">🧠 Algorithms</a></li>
-            <li><a href="/year3/ml.html" class="hover:underline">🤖 Machine Learning</a></li>
-            <li><a href="/year3/labs.html" class="hover:underline">🧪 Labs</a></li>
-          </ul>
-        </div>
+      <!-- Year 3 -->
+      <div class="year-box">
+        <h3>3rd Year</h3>
+        <a href="/year3/os.html">🧮 OS</a>
+        <a href="/year3/cn.html">🌐 Networks</a>
+        <a href="/year3/se.html">🧱 Software Engg</a>
+        <a href="/year3/daa.html">🧠 Algorithms</a>
+        <a href="/year3/ml.html">🤖 ML</a>
+        <a href="/year3/labs.html">🧪 Labs</a>
       </div>
 
-      <div class="bg-white border border-black rounded-xl p-4 shadow-md hover:shadow-xl transition">
-        <button onclick="toggleDropdown('year4')" class="w-full text-left text-lg font-semibold flex items-center justify-between">4th Year <i class="ph ph-caret-down"></i></button>
-        <div id="year4" class="mt-2 hidden">
-          <ul class="space-y-2 pl-4 mt-2">
-            <li><a href="/year4/web.html" class="hover:underline">🕸️ Web Technology</a></li>
-            <li><a href="/year4/cloud.html" class="hover:underline">☁️ Cloud Computing</a></li>
-            <li><a href="/year4/bigdata.html" class="hover:underline">📦 Big Data</a></li>
-            <li><a href="/year4/cyber.html" class="hover:underline">🔐 Cyber Security</a></li>
-            <li><a href="/year4/ai.html" class="hover:underline">🧠 AI</a></li>
-            <li><a href="/year4/project.html" class="hover:underline">📁 Project Work</a></li>
-            <li><a href="/year4/internship.html" class="hover:underline">🎓 Internship</a></li>
-          </ul>
-        </div>
+      <!-- Year 4 -->
+      <div class="year-box">
+        <h3>4th Year</h3>
+        <a href="/year4/web.html">🕸️ Web Tech</a>
+        <a href="/year4/cloud.html">☁️ Cloud</a>
+        <a href="/year4/bigdata.html">📦 Big Data</a>
+        <a href="/year4/cyber.html">🔐 Cyber Security</a>
+        <a href="/year4/ai.html">🧠 AI</a>
+        <a href="/year4/project.html">📁 Project</a>
+        <a href="/year4/internship.html">🎓 Internship</a>
       </div>
+
     </div>
   </section>
 
-  <footer class="bg-white border-t border-black text-center p-4">
+  <!-- Footer -->
+  <footer>
     <p>© 2025 Engineering Portal. All rights reserved.</p>
   </footer>
 
+  <!-- Dark Mode Script -->
   <script>
-    function toggleDropdown(id) {
-      const el = document.getElementById(id);
-      el.classList.toggle("hidden");
+    const toggleButton = document.getElementById('theme-toggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedTheme = localStorage.getItem('theme');
+
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+      document.body.classList.add('dark-mode');
+      toggleButton.textContent = '☀️';
     }
 
-    function toggleDarkMode() {
-      document.body.classList.toggle("bg-black");
-      document.body.classList.toggle("text-white");
-    }
+    toggleButton.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      const isDark = document.body.classList.contains('dark-mode');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      toggleButton.textContent = isDark ? '☀️' : '🌙';
+    });
   </script>
+
 </body>
 </html>

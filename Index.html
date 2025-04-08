@@ -6,7 +6,6 @@
   <title>Engineering Portal</title>
   <link rel="stylesheet" href="/style.css" />
   <style>
-    /* Optional quick styling */
     .dropdown {
       display: none;
       margin-top: 10px;
@@ -43,29 +42,63 @@
   <div class="section">
     <h2>Select Year</h2>
     <div class="year-links">
-      <!-- 1st Year with Dropdown -->
+      <!-- 1st Year -->
       <div class="year-box">
-        <a href="javascript:void(0);" onclick="toggleDropdown()">1st Year ▾</a>
-        <div id="branchDropdown" class="dropdown">
-          <a href="/year1/cse.html">Computer Science and Engineering (CSE)</a>
-          <a href="/year1/ise.html">Information Science and Engineering (ISE)</a>
-          <a href="/year1/csbs.html">Computer Science and Business Systems (CSBS)</a>
-          <a href="/year1/aiml.html">AI & Machine Learning (AIML)</a>
-          <a href="/year1/ai_ds.html">AI & Data Science</a>
-          <a href="/year1/ece.html">Electronics and Communication (ECE)</a>
-          <a href="/year1/eee.html">Electrical and Electronics (EEE)</a>
-          <a href="/year1/me.html">Mechanical Engineering (ME)</a>
-          <a href="/year1/ce.html">Civil Engineering (CE)</a>
-          <a href="/year1/ds.html">Data Science</a>
-          <a href="/year1/cyber.html">Cyber Security</a>
-          <a href="/year1/cce.html">Computer & Communication Engg</a>
-          <!-- Add more branches as needed -->
+        <a href="javascript:void(0);" onclick="toggleDropdown('year1')">1st Year ▾</a>
+        <div id="year1" class="dropdown">
+          <a href="/year1/maths.html">Engineering Mathematics I & II</a>
+          <a href="/year1/physics.html">Engineering Physics</a>
+          <a href="/year1/chemistry.html">Engineering Chemistry</a>
+          <a href="/year1/c_programming.html">C Programming</a>
+          <a href="/year1/electrical.html">Basic Electrical Engineering</a>
+          <a href="/year1/electronics.html">Basic Electronics</a>
+          <a href="/year1/env.html">Environmental Studies</a>
+          <a href="/year1/graphics.html">Engineering Graphics</a>
+          <a href="/year1/labs.html">Physics/Chemistry/Workshop Labs</a>
         </div>
       </div>
-      <!-- Other years -->
-      <div class="year-box"><a href="#">2nd Year</a></div>
-      <div class="year-box"><a href="#">3rd Year</a></div>
-      <div class="year-box"><a href="#">4th Year</a></div>
+
+      <!-- 2nd Year -->
+      <div class="year-box">
+        <a href="javascript:void(0);" onclick="toggleDropdown('year2')">2nd Year ▾</a>
+        <div id="year2" class="dropdown">
+          <a href="/year2/data_structures.html">Data Structures</a>
+          <a href="/year2/digital_logic.html">Digital Logic Design</a>
+          <a href="/year2/discrete_math.html">Discrete Mathematics</a>
+          <a href="/year2/oop.html">Object Oriented Programming (C++)</a>
+          <a href="/year2/co.html">Computer Organization</a>
+          <a href="/year2/dbms.html">Database Management Systems</a>
+          <a href="/year2/microcontroller.html">Microcontrollers & Embedded Systems</a>
+          <a href="/year2/labs.html">DS Lab / OOP Lab</a>
+        </div>
+      </div>
+
+      <!-- 3rd Year -->
+      <div class="year-box">
+        <a href="javascript:void(0);" onclick="toggleDropdown('year3')">3rd Year ▾</a>
+        <div id="year3" class="dropdown">
+          <a href="/year3/os.html">Operating Systems</a>
+          <a href="/year3/cn.html">Computer Networks</a>
+          <a href="/year3/se.html">Software Engineering</a>
+          <a href="/year3/daa.html">Design and Analysis of Algorithms</a>
+          <a href="/year3/ml.html">Machine Learning</a>
+          <a href="/year3/labs.html">Algorithm & DB Lab</a>
+        </div>
+      </div>
+
+      <!-- 4th Year -->
+      <div class="year-box">
+        <a href="javascript:void(0);" onclick="toggleDropdown('year4')">4th Year ▾</a>
+        <div id="year4" class="dropdown">
+          <a href="/year4/web.html">Web Technology</a>
+          <a href="/year4/cloud.html">Cloud Computing</a>
+          <a href="/year4/bigdata.html">Big Data</a>
+          <a href="/year4/cyber.html">Cyber Security</a>
+          <a href="/year4/ai.html">Artificial Intelligence</a>
+          <a href="/year4/project.html">Project Work</a>
+          <a href="/year4/internship.html">Internship</a>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -75,9 +108,9 @@
 
   <script src="/script.js" defer></script>
   <script>
-    function toggleDropdown() {
-      const dropdown = document.getElementById("branchDropdown");
-      dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+    function toggleDropdown(id) {
+      const el = document.getElementById(id);
+      el.style.display = (el.style.display === "block") ? "none" : "block";
     }
 
     function toggleDarkMode() {

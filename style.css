@@ -4,6 +4,7 @@ body {
   margin: 0;
   background: #ffffff;
   color: #000000;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Header */
@@ -67,7 +68,7 @@ nav a:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   padding: 2rem;
   width: 180px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
   border: 1px solid #ccc;
 }
 
@@ -81,6 +82,11 @@ nav a:hover {
   font-weight: bold;
   font-size: 1.1rem;
   text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.year-box a:hover {
+  color: #ff6600;
 }
 
 /* Footer */
@@ -116,25 +122,34 @@ embed, iframe {
   width: 100%;
 }
 
+/* Buttons */
+button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #333;
+}
+
 /* ============================= */
-/* 🌙 Dark Mode Overrides */
+/* 🌙 Dark Mode - Enhanced Style */
 /* ============================= */
 body.dark-mode {
   background-color: #121212;
-  color: #f0f0f0;
+  color: #e0e0e0;
 }
 
 body.dark-mode header,
 body.dark-mode footer,
 body.dark-mode nav {
   background-color: #000;
-  color: #fff;
-}
-
-body.dark-mode .year-box {
-  background-color: #1e1e1e;
-  color: white;
-  border-color: #444;
+  color: #ffffff;
 }
 
 body.dark-mode nav a {
@@ -145,19 +160,48 @@ body.dark-mode nav a:hover {
   color: #ffcc00;
 }
 
-body.dark-mode pre {
-  background-color: #222;
-  color: #fff;
-  border-color: #555;
+body.dark-mode .year-box {
+  background-color: #1f1f1f;
+  color: #f5f5f5;
+  border-color: #333;
 }
 
-body.dark-mode iframe,
-body.dark-mode embed {
-  border-color: #444;
+body.dark-mode .year-box a {
+  color: #f0f0f0;
+}
+
+body.dark-mode .year-box a:hover {
+  color: #ffcc00;
 }
 
 body.dark-mode h1,
 body.dark-mode h2,
 body.dark-mode h3 {
+  color: #ffffff;
+}
+
+body.dark-mode pre {
+  background-color: #252525;
+  color: #ffffff;
+  border-color: #444;
+}
+
+body.dark-mode iframe,
+body.dark-mode embed {
+  border-color: #333;
+}
+
+body.dark-mode button {
+  background-color: #222;
   color: #fff;
+  border: 1px solid #444;
+}
+
+body.dark-mode button:hover {
+  background-color: #333;
+}
+
+/* Global smooth transition */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease;
 }

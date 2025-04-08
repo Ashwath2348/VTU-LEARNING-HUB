@@ -5,12 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Engineering Portal</title>
   <link rel="stylesheet" href="/style.css" />
+  <style>
+    /* Optional quick styling */
+    .dropdown {
+      display: none;
+      margin-top: 10px;
+    }
+    .dropdown a {
+      display: block;
+      padding: 6px 12px;
+      background-color: #f0f0f0;
+      margin: 2px 0;
+      border-radius: 4px;
+      text-decoration: none;
+      color: #333;
+    }
+    .dropdown a:hover {
+      background-color: #ddd;
+    }
+  </style>
 </head>
 <body>
   <header>
     <h1>Engineering Lab & Notes Hub</h1>
     <p>All years, all subjects, all in one place!</p>
-    <!-- Dark Mode Button -->
     <button onclick="toggleDarkMode()" style="margin-top: 1rem; background: black; color: white; padding: 0.5rem 1rem; border: none; border-radius: 5px;">
       Toggle Dark Mode
     </button>
@@ -25,7 +43,26 @@
   <div class="section">
     <h2>Select Year</h2>
     <div class="year-links">
-      <div class="year-box"><a href="/year1/c_programming.html">1st Year</a></div>
+      <!-- 1st Year with Dropdown -->
+      <div class="year-box">
+        <a href="javascript:void(0);" onclick="toggleDropdown()">1st Year ▾</a>
+        <div id="branchDropdown" class="dropdown">
+          <a href="/year1/cse.html">Computer Science and Engineering (CSE)</a>
+          <a href="/year1/ise.html">Information Science and Engineering (ISE)</a>
+          <a href="/year1/csbs.html">Computer Science and Business Systems (CSBS)</a>
+          <a href="/year1/aiml.html">AI & Machine Learning (AIML)</a>
+          <a href="/year1/ai_ds.html">AI & Data Science</a>
+          <a href="/year1/ece.html">Electronics and Communication (ECE)</a>
+          <a href="/year1/eee.html">Electrical and Electronics (EEE)</a>
+          <a href="/year1/me.html">Mechanical Engineering (ME)</a>
+          <a href="/year1/ce.html">Civil Engineering (CE)</a>
+          <a href="/year1/ds.html">Data Science</a>
+          <a href="/year1/cyber.html">Cyber Security</a>
+          <a href="/year1/cce.html">Computer & Communication Engg</a>
+          <!-- Add more branches as needed -->
+        </div>
+      </div>
+      <!-- Other years -->
       <div class="year-box"><a href="#">2nd Year</a></div>
       <div class="year-box"><a href="#">3rd Year</a></div>
       <div class="year-box"><a href="#">4th Year</a></div>
@@ -36,7 +73,16 @@
     <p>© 2025 Engineering Portal. All rights reserved.</p>
   </footer>
 
-  <!-- Link to JavaScript file -->
   <script src="/script.js" defer></script>
+  <script>
+    function toggleDropdown() {
+      const dropdown = document.getElementById("branchDropdown");
+      dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+    }
+
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
 </body>
 </html>

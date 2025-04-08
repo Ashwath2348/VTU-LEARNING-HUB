@@ -1,34 +1,28 @@
-// script.js
+// script.js - Dark Mode Toggle Logic
 
-// 1. Toggle Dark Mode
-function toggleDarkMode() {
-  document.body.classList.toggle("dark-mode");
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleBtn = document.getElementById("theme-toggle");
+  const body = document.body;
 
-  // Save preference
-  const isDark = document.body.classList.contains("dark-mode");
-  localStorage.setItem("darkMode", isDark);
-}
-
-// 2. Load preference from localStorage
-window.addEventListener("DOMContentLoaded", () => {
-  const isDark = localStorage.getItem("darkMode") === "true";
-  if (isDark) {
-    document.body.classList.add("dark-mode");
+  // Load saved theme from localStorage
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    body.classList.add("dark-mode");
+    toggleBtn.textContent = "☀️";
+  } else {
+    toggleBtn.textContent = "🌙";
   }
 
-  // Optional smooth scroll (for in-page links)
-  document.querySelectorAll("a[href^='#']").forEach(anchor => {
-    anchor.addEventListener("click", function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute("href"));
-      if (target) {
-        target.scrollIntoView({ behavior: "smooth" });
-      }
-    });
+  // Toggle dark mode on button click
+  toggleBtn.addEventListener("click", function () {
+    body.classList.toggle("dark-mode");
+
+    if (body.classList.contains("dark-mode")) {
+      localStorage.setItem("theme", "dark");
+      toggleBtn.textContent = "☀️"; // Sun for light mode
+    } else {
+      localStorage.setItem("theme", "light");
+      toggleBtn.textContent = "🌙"; // Moon for dark mode
+    }
   });
 });
-
-function toggleDarkMode() {
-  document.body.classList.toggle("dark-mode");
-}
-

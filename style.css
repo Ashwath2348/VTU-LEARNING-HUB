@@ -6,24 +6,52 @@ body {
   color: #000000;
 }
 
-/* Header */
+$1
+
+.toggle-dark-mode {
+  background: white;
+  color: black;
+  padding: 0.5rem 1rem;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.toggle-dark-mode:hover {
+  background: #ffcc00;
+  color: #000;
+}
 header {
   background-color: #000000;
   color: white;
   padding: 1.5rem 1rem;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 header h1 {
   margin: 0;
   font-size: 2rem;
+  flex-grow: 1;
+  text-align: center;
+}
+
+header h1::before {
+  content: 'VTU Learning Hub';
+  display: block;
 }
 
 header p {
   margin-top: 0.5rem;
   font-size: 1rem;
   color: #ccc;
+  flex-basis: 100%;
+  text-align: center;
 }
 
 /* Navigation */

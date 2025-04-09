@@ -40,6 +40,20 @@ header p {
   color: #ccc;
 }
 
+/* VTU Learning Hub Text */
+header::after {
+  content: "VTU Learning Hub";
+  display: block;
+  margin-top: 0.5rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #000;
+}
+
+body.dark-mode header::after {
+  color: #fff;
+}
+
 /* Navigation */
 nav {
   background-color: #111;

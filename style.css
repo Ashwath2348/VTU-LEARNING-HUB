@@ -1,193 +1,26 @@
-/* style.css - Black & White with Dark Mode Support */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  background: #ffffff;
-  color: #000000;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
+<style>
+  body {
+    color: black;
+    background-color: white;
+  }
+  body.dark-mode {
+    color: white;
+    background-color: #121212;
+  }
 
-/* Toggle Button */
-#theme-toggle {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  background-color: transparent;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  z-index: 1000;
-}
+  .vtu-label {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    font-weight: bold;
+    color: inherit;
+  }
 
-/* Header */
-header {
-  background-color: #000000;
-  color: white;
-  padding: 1.5rem 1rem;
-  text-align: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  position: relative;
-}
+  header {
+    position: relative;
+  }
 
-header h1 {
-  margin: 0;
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-header p {
-  margin-top: 0.5rem;
-  font-size: 1rem;
-  color: #ccc;
-}
-
-/* VTU Learning Hub Text - Left Corner */
-.vtu-label {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  font-weight: bold;
-  font-size: 1.2rem;
-  color: #000;
-}
-
-body.dark-mode .vtu-label {
-  color: #fff;
-}
-
-/* Navigation */
-nav {
-  background-color: #111;
-  display: flex;
-  justify-content: center;
-  padding: 1rem;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: #ffcc00;
-}
-
-/* Section Layout */
-.section {
-  padding: 2rem 1rem;
-  text-align: center;
-}
-
-.year-links {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-  margin-top: 2rem;
-}
-
-.year-box {
-  background: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
-  width: 180px;
-  transition: transform 0.3s ease;
-  border: 1px solid #ccc;
-}
-
-.year-box:hover {
-  transform: translateY(-5px);
-}
-
-year-box a {
-  display: block;
-  color: #000;
-  font-weight: bold;
-  font-size: 1.1rem;
-  text-decoration: none;
-  margin-bottom: 0.5rem;
-}
-
-/* Footer */
-footer {
-  background-color: #000;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
-}
-
-/* Code Blocks */
-pre {
-  background-color: #f4f4f4;
-  padding: 1rem;
-  border-radius: 10px;
-  font-family: monospace;
-  overflow-x: auto;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-}
-
-/* Titles */
-h1, h2, h3 {
-  color: #000000;
-}
-
-/* Embeds */
-embed, iframe {
-  border: 2px solid #000000;
-  border-radius: 8px;
-  margin: 1rem 0;
-  width: 100%;
-}
-
-/* ============================= */
-/* 🌙 Dark Mode Overrides */
-/* ============================= */
-body.dark-mode {
-  background-color: #121212;
-  color: #f0f0f0;
-}
-
-body.dark-mode header,
-body.dark-mode footer,
-body.dark-mode nav {
-  background-color: #000;
-  color: #fff;
-}
-
-body.dark-mode .year-box {
-  background-color: #1e1e1e;
-  color: white;
-  border-color: #444;
-}
-
-body.dark-mode nav a {
-  color: #ddd;
-}
-
-body.dark-mode nav a:hover {
-  color: #ffcc00;
-}
-
-body.dark-mode pre {
-  background-color: #222;
-  color: #fff;
-  border-color: #555;
-}
-
-body.dark-mode iframe,
-body.dark-mode embed {
-  border-color: #444;
-}
-
-body.dark-mode h1,
-body.dark-mode h2,
-body.dark-mode h3 {
-  color: #fff;
-}
+  a, h1, h2, h3, h4, h5, h6, p, span, div, li, strong, em, button {
+    color: inherit;
+  }
+</style>

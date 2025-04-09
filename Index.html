@@ -8,11 +8,20 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
   <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
     body {
       color: black;
       background-color: white;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
       transition: background-color 0.4s ease, color 0.4s ease;
     }
+
     body.dark-mode {
       color: white;
       background-color: #121212;
@@ -29,7 +38,7 @@
 
     header {
       position: relative;
-      padding-top: 2rem;
+      padding: 2rem 1rem;
       text-align: center;
       background-color: black;
       color: white;
@@ -82,10 +91,9 @@
     footer {
       background-color: black;
       color: white;
-      position: relative;
-      bottom: 0;
-      width: 100%;
-      margin-top: 3rem;
+      padding: 1rem;
+      text-align: center;
+      margin-top: auto;
       transition: background-color 0.4s ease, color 0.4s ease;
     }
 
@@ -173,7 +181,7 @@
   </section>
 
   <!-- Footer -->
-  <footer class="text-center py-4">
+  <footer>
     <p>© 2025 Engineering Portal. All rights reserved.</p>
   </footer>
 

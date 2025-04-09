@@ -4,9 +4,10 @@
     background-color: white;
     transition: background-color 0.4s ease, color 0.4s ease;
   }
+
   body.dark-mode {
     color: white;
-    background-color: #121212;
+    background-color: #000;
   }
 
   .vtu-label {
@@ -26,7 +27,20 @@
 
   a, h1, h2, h3, h4, h5, h6, p, span, div, li, strong, em, button {
     color: inherit;
-    transition: color 0.4s ease;
+    transition: color 0.4s ease, background-color 0.4s ease;
+  }
+
+  nav a {
+    margin: 0 0.5rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  nav a:hover {
+    background-color: currentColor;
+    color: white;
   }
 
   .year-links {
@@ -42,12 +56,22 @@
     border-radius: 0.75rem;
     padding: 1rem;
     width: 250px;
+    background-color: transparent;
     transition: transform 0.3s ease, background-color 0.3s ease;
-    background-color: inherit;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+  }
+
+  .dark-mode .year-box {
+    box-shadow: 2px 2px 6px rgba(255,255,255,0.1);
   }
 
   .year-box:hover {
     transform: translateY(-5px);
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  .dark-mode .year-box:hover {
+    background-color: rgba(255, 255, 255, 0.1);
   }
 
   .year-box h3 {
@@ -60,5 +84,12 @@
     padding: 0.25rem 0;
     text-decoration: none;
     transition: color 0.3s ease;
+  }
+
+  footer {
+    margin-top: 2rem;
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
   }
 </style>

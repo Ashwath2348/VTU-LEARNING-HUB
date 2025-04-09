@@ -7,6 +7,28 @@
   <link rel="stylesheet" href="style.css" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <style>
+    body {
+      color: black;
+    }
+    body.dark-mode {
+      color: white;
+      background-color: #121212;
+    }
+    .vtu-label {
+      position: absolute;
+      top: 0.5rem;
+      left: 0.5rem;
+      font-weight: bold;
+      color: inherit;
+    }
+    header {
+      position: relative;
+    }
+    a, h1, h2, h3, p {
+      color: inherit;
+    }
+  </style>
 </head>
 <body>
 
@@ -15,12 +37,10 @@
 
   <!-- Header -->
   <header>
-    <div class="vtu-label">VTU Learning Hub</div> <!-- 👈 Added here -->
-
+    <div class="vtu-label">VTU Learning Hub</div>
     <div class="top-bar">
       <a href="/index.html" class="home-button">🏠 Home</a>
     </div>
-    
     <h1>Engineering Lab & Notes Hub</h1>
     <p>All years, all subjects, all in one place!</p>
   </header>

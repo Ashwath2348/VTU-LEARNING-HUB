@@ -38,11 +38,25 @@
 
     header {
       position: relative;
-      padding: 2rem 1rem;
+      padding: 2rem 1rem 1rem 1rem;
       text-align: center;
       background-color: black;
       color: white;
       transition: background-color 0.4s ease, color 0.4s ease;
+    }
+
+    .theme-toggle-wrapper {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+
+    #theme-toggle {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: white;
     }
 
     body.dark-mode header {
@@ -101,16 +115,26 @@
       background-color: #000;
       color: white;
     }
+
+    nav {
+      background-color: white;
+      padding: 0.5rem;
+      text-align: center;
+    }
+
+    body.dark-mode nav {
+      background-color: #121212;
+    }
   </style>
 </head>
 <body>
 
-  <!-- Theme Toggle Button -->
-  <button id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
-
   <!-- Header -->
   <header>
     <div class="vtu-label">VTU Learning Hub</div>
+    <div class="theme-toggle-wrapper">
+      <button id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
+    </div>
     <h1>Engineering Lab & Notes Hub</h1>
     <p>All years, all subjects, all in one place!</p>
   </header>

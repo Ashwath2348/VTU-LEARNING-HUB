@@ -4,50 +4,39 @@ body {
   margin: 0;
   background: #ffffff;
   color: #000000;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.toggle-dark-mode {
-  background: white;
-  color: black;
-  padding: 0.5rem 1rem;
-  border: 2px solid #fff;
-  border-radius: 5px;
+/* Toggle Button */
+#theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
   cursor: pointer;
-  font-weight: bold;
-  transition: all 0.3s ease;
+  z-index: 1000;
 }
 
-.toggle-dark-mode:hover {
-  background: #ffcc00;
-  color: #000;
-}
-
+/* Header */
 header {
-  background-color: #ffffff;
-  color: #000000;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background-color: #000000;
+  color: white;
+  padding: 1.5rem 1rem;
+  text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 header h1 {
   margin: 0;
   font-size: 2rem;
-  text-align: left;
-  flex: 1;
-  color: #000;
-  background-color: #fff;
-  font-weight: bold;
 }
 
 header p {
   margin-top: 0.5rem;
   font-size: 1rem;
   color: #ccc;
-  flex-basis: 100%;
-  text-align: center;
 }
 
 /* Navigation */
@@ -77,7 +66,7 @@ nav a:hover {
   text-align: center;
 }
 
-year-links {
+.year-links {
   display: flex;
   justify-content: center;
   gap: 2rem;
@@ -93,7 +82,6 @@ year-links {
   width: 180px;
   transition: transform 0.3s ease;
   border: 1px solid #ccc;
-  color: #000;
 }
 
 .year-box:hover {
@@ -106,6 +94,7 @@ year-links {
   font-weight: bold;
   font-size: 1.1rem;
   text-decoration: none;
+  margin-bottom: 0.5rem;
 }
 
 /* Footer */
@@ -146,7 +135,7 @@ embed, iframe {
 /* ============================= */
 body.dark-mode {
   background-color: #121212;
-  color: #ffffff;
+  color: #f0f0f0;
 }
 
 body.dark-mode header,
@@ -156,19 +145,10 @@ body.dark-mode nav {
   color: #fff;
 }
 
-body.dark-mode header h1 {
-  color: #ffffff;
-  background-color: #000000;
-}
-
 body.dark-mode .year-box {
   background-color: #1e1e1e;
   color: white;
   border-color: #444;
-}
-
-body.dark-mode .year-box a {
-  color: #fff;
 }
 
 body.dark-mode nav a {
